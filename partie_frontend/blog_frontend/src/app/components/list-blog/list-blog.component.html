@@ -1,0 +1,50 @@
+<br>
+ <div class="container">
+    <form>
+    <div>
+        <div class="col-md-6 mb-3">
+          <input type="search" class="form-control"  id="validation" placeholder="search" required>
+          <button class="btn btn-info">Search </button>
+        </div>
+</div> 
+<form>
+
+<div class="container">
+    
+    <div class="card">
+      <div class="card-header">
+       <h2>List Blogs</h2> 
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+              <tr >
+                <th>Title</th>
+                <th>Content</th>
+                <th>Author</th>
+                <th>Upvote</th>
+                <th>Downvote</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let blog of blogs | async">
+                <td>{{blog.title}}</td>
+                <td>{{blog.content}}</td>
+                <td>{{blog.author}}</td>
+                <td>
+                <button  class="btn btn-success">upvote</button>
+                </td>
+                <td>
+                <button  class="btn btn-danger">downvote</button>
+               </td>
+                 <td>
+                <button (click)="Details(blog.id)" class="btn btn-info">details</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        
+    </div>
+    </div>
+  </div>

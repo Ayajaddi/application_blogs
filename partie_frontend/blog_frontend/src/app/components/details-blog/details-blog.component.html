@@ -1,0 +1,24 @@
+<div class="container">
+    
+    <div class="card">
+      <div class="card-header">
+       <h2>Details Blog</h2> 
+      </div>
+      <div class="card-body">
+ 
+      <div *ngIf="blog" >
+             
+            <div>
+              <label><b>Title: </b></label> {{blog.title}}
+            </div>
+            <div>
+              <label><b>Content: </b></label> {{blog.content}}
+            </div>
+            <div>
+              <label><b>Author: </b></label> {{blog.author}}
+            </div>  
+        
+    </div>
+    <button (click)="list()" class="btn btn-warning" type="Reset">Return</button>  
+    </div>
+  </div>

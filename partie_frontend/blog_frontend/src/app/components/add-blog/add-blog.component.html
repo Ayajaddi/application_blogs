@@ -1,0 +1,42 @@
+
+<div class="container">
+    
+    <div class="card">
+      <div class="card-header">
+        <h2>Add Blog</h2>
+      </div>
+      <div [hidden]="submitted"  class="card-body">
+        <form (ngSubmit)="onSubmit()">
+           
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationDefault03">Title</label>
+                <input type="text" class="form-control" [(ngModel)]="blog.title" id="validationDefault03" placeholder="title" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationDefault04">Content</label>
+                <input type="text" class="form-control"  [(ngModel)]="blog.content" id="validationDefault04" placeholder="content" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validationDefault05">Author</label>
+                <input type="text" class="form-control"  [(ngModel)]="blog.author" id="validationDefault05" placeholder="author" required>
+              </div>
+            </div>
+            
+            <button routerLink="/list" class="btn btn-primary" type="submit">Submit</button>
+          </form>
+   
+    </div>
+
+    
+  <div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+ </div>
+    </div>
+  </div>
+
+
+
+
+
+
